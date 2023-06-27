@@ -66,8 +66,8 @@ fi
 
 ################################################################################
 # Enable TCP Hybla for 9P.
-if [ ${DEVICE} == "9P" ]; then
-	export CONFIG_TCP_CONG_ADVANCED=yes
+if [ ${MSM_ARCH} == "lahaina" ]; then
+    export CONFIG_TCP_CONG_ADVANCED=yes
     export CONFIG_TCP_CONG_BIC=yes
     export CONFIG_TCP_CONG_CUBIC=yes
     export CONFIG_TCP_CONG_WESTWOOD=yes
