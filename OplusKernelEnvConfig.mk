@@ -169,6 +169,13 @@ else ifeq ($(DEVICE), LUNAA)
 $(info Building kernel for Realme GT Master Edition, enabling VOOC)
 else
 $(info Building kernel for OnePlus 9 Pro)
+export CONFIG_TCP_CONG_ADVANCED=y
+export CONFIG_TCP_CONG_BIC=y
+export CONFIG_TCP_CONG_CUBIC=y
+export CONFIG_TCP_CONG_WESTWOOD=y
+export CONFIG_TCP_CONG_HTCP=y
+export CONFIG_TCP_CONG_HYBLA=y
+export CONFIG_TCP_CONG_ILLINOIS=y
 endif
 ifeq ($(OPLUS_VND_ENV_CHG_OP9RT_PMIC_VOOCPHY),yes)
 export CONFIG_OPLUS_CHG_OP9RT_PMIC_VOOCPHY=y
