@@ -50,7 +50,7 @@ jobs:
       run: |
         git config --global user.name "${GITHUB_USER}"
         git config --global user.email "${GITHUB_EMAIL}"
-        git clone https://"${GITHUB_USER}":"${PUSH_TOKEN}"@github.com/mvaisakh/android_device_oneplus_lemonade-kernel lemonade-kernel -b tm-clang
+        git clone https://"${GITHUB_USER}":"${PUSH_TOKEN}"@github.com/ravichaudhary133/android_device_oneplus_lemonade-kernel lemonade-kernel -b tm-clang
         cp out/msm-5.4-lahaina-nqgki/dist/* lemonade-kernel
         cd lemonade-kernel
         f="$(git rev-parse --git-dir)/hooks/commit-msg"; curl -o "$f" https://review.statixos.com/tools/hooks/commit-msg ; chmod +x "$f"
@@ -99,7 +99,7 @@ jobs:
       run: |
         git config --global user.name "${GITHUB_USER}"
         git config --global user.email "${GITHUB_EMAIL}"
-        git clone https://"${GITHUB_USER}":"${PUSH_TOKEN}"@github.com/mvaisakh/android_device_oneplus_lemonade-kernel lemonade-kernel -b tm-gcc
+        git clone https://"${GITHUB_USER}":"${PUSH_TOKEN}"@github.com/ravichaudhary133/android_device_oneplus_lemonade-kernel lemonade-kernel -b tm-gcc
         cp out/msm-5.4-lahaina-nqgki/dist/* lemonade-kernel
         cd lemonade-kernel
         f="$(git rev-parse --git-dir)/hooks/commit-msg"; curl -o "$f" https://review.statixos.com/tools/hooks/commit-msg ; chmod +x "$f"
