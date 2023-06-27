@@ -2,6 +2,12 @@ name: Kernel Build CI 2
 
 on: workflow_dispatch
 
+steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: main
+
 env:
   BOT_MSG_URL: ${{ secrets.TG_BOT_MSG_URL }}
   CHAT_ID: ${{ secrets.TG_CHAT_ID }}
