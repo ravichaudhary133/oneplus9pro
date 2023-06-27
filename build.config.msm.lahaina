@@ -53,8 +53,8 @@ esac
 
 ################################################################################
 # Enable VOOC for 9RT.
-if [ ${DEVICE} == "9RT" ]; then
-	export OPLUS_VND_ENV_CHG_OP9RT_PMIC_VOOCPHY=yes
+if [ ${DEVICE} == "9P" ]; then
+	export CONFIG_TCP_CONG_HYBLA=yes
 fi
 
 # Enable VOOC for realme GT master edition (lunaa).
