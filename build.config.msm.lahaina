@@ -65,6 +65,24 @@ if [ ${DEVICE} == "LUNAA" ]; then
 fi
 
 ################################################################################
+# Enable TCP Hybla for 9P.
+if [ ${DEVICE} == "9P" ]; then
+	export CONFIG_TCP_CONG_ADVANCED=yes
+    export CONFIG_TCP_CONG_BIC=y
+    export CONFIG_TCP_CONG_CUBIC=y
+    export CONFIG_TCP_CONG_WESTWOOD=y
+    export CONFIG_TCP_CONG_HTCP=y
+    export CONFIG_TCP_CONG_HSTCP=y
+    export CONFIG_TCP_CONG_HYBLA=y
+    export CONFIG_TCP_CONG_VEGAS=y
+    export CONFIG_TCP_CONG_SCALABLE=y
+    export CONFIG_TCP_CONG_LP=y
+    export CONFIG_TCP_CONG_VENO=y
+    export CONFIG_TCP_CONG_YEAH=y
+    export CONFIG_TCP_CONG_ILLINOIS=y
+fi
+#################################################################################
+
 ## Inherit perf configs
 if [ ${GCOV_PROFILE} != 1 ]; then
 . ${KERNEL_DIR}/build.config.common.performance
