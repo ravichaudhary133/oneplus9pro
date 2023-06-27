@@ -2,11 +2,6 @@ name: Kernel Build CI 2
 
 on: workflow_dispatch
 
-steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        ref: main
 
 env:
   BOT_MSG_URL: ${{ secrets.TG_BOT_MSG_URL }}
@@ -23,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: main
     - name: Setup repo
       run: sudo apt update -y && sudo apt install -y repo elfutils libarchive-tools
     - name: Repo sync
